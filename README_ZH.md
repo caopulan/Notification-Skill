@@ -22,7 +22,7 @@ $skill-installer https://github.com/caopulan/Notification-Skill/tree/main/email-
 
 #### 1）:key: 获取所需的 Key 或其他参数
 1. [Bark](https://github.com/finb/bark)
-2. [Email]()
+2. [Email](https://support.google.com/a/answer/176600?hl=en)
 
 #### 2）:wrench: 将相关信息设置到机器环境变量
 

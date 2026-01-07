@@ -21,9 +21,9 @@ $skill-installer https://github.com/caopulan/Notification-Skill/tree/main/email-
 
 ### 2. :gear: Configure
 
-#### 1) :key: Get required keys or parameters (TODO)
+#### 1) :key: Get required keys or parameters
 1. [Bark](https://github.com/finb/bark)
-2. Email
+2. [Email](https://support.google.com/a/answer/176600?hl=en) (Gmail as example)
 
 #### 2) :wrench: Set environment variables on the machine
 

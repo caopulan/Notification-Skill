@@ -7,49 +7,65 @@
 ## 使用说明
 
 ### 1. 安装Notification-Skill
-Codex
+选择需要的通知工具进行安装
 ```bash
-codex
-
-$skill-installer https://github.com/caopulan/Notification-Skill
+$skill-installer https://github.com/caopulan/Notification-Skill/tree/main/bark-notify
+$skill-installer https://github.com/caopulan/Notification-Skill/tree/main/email-notify
 ```
 
 ### 2. 配置相关信息
 
-1）在机器上配置环境变量
+#### 1） 获取所需的Key或其他参数（TODO）
+1. Bark
+2. Email
+
+#### 2）将相关信息设置到机器环境变量
 
 设置环境变量（例如写入 `~/.zshrc` 或 `~/.bashrc`）：
 
 ```bash
 export CODEX_MACHINE_NAME="你的设备名"
+
+# Bark
 export CODEX_BARK_KEY="你的-bark-key"
 export CODEX_BARK_BASE_URL="https://api.day.app"
+
+# Email
+export CODEX_EMAIL_SMTP_HOST="smtp.example.com"
+export CODEX_EMAIL_SMTP_PORT="587"
+export CODEX_EMAIL_USERNAME="user@example.com"
+export CODEX_EMAIL_PASSWORD="..."
+export CODEX_EMAIL_FROM="user@example.com"
+export CODEX_EMAIL_TO="recipient1@example.com,recipient2@example.com"
+export CODEX_EMAIL_USE_TLS="false" # true/false, default false
+export CODEX_EMAIL_USE_SSL="true" # true/false, default true
 ```
 
-2）为项目配置项目名
-- 在`AGENTS.md`中加入项目名称
+#### 3）（可选）设置项目名称
+- 在项目的`AGENTS.md`中加入项目名称
 - 否则使用目录名称作为项目名称
 
 ### 3. 使用
-1) 在`AGENTS.md`添加说明
-
+#### 1) 在`AGENTS.md`添加说明
+可以在全局AGENTS.md中设置来支持对该机器的所有任务进行通知。例如在`~/.codex/AGENTS.md`中添加：
 ```
-- 在每次执行完任务后，通过bark-notify skill通知用户
+- 在每次执行完任务后，通过bark-notify/email-notify skill通知用户
 ```
 
-2) 显式调用
+#### 2） 显式调用
+1. Bark
 ```bash
-python3 bark-notify/scripts/send_bark_notification.py \
+python bark-notify/scripts/send_bark_notification.py \
   --task-title "任务概述" \
   --status "success" \
-  --summary "完成的内容"
+  --summary "完成的内容" \
+  --project-name "..."
 ```
-
-参数：
-
-- `--task-title`（必填）：任务标题
-- `--status`（必填）：执行状态，例如 `success`、`failed`
-- `--summary`（必填）：结果摘要
-- `--project-name`：覆盖项目名
-- `--timeout`：超时秒数（默认 10）
-- `--dry-run`：打印请求但不发送
+2. Email
+```bash
+python email-notify/scripts/send_email_notification.py \
+  --task-title "..." \
+  --status "success" \
+  --summary "..." \
+  --project-name "..."
+```

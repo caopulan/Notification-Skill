@@ -23,8 +23,8 @@ export CODEX_EMAIL_USERNAME="user@example.com"
 export CODEX_EMAIL_PASSWORD="..."
 export CODEX_EMAIL_FROM="user@example.com"
 export CODEX_EMAIL_TO="recipient1@example.com,recipient2@example.com"
-export CODEX_EMAIL_USE_TLS="true" # true/false, default true
-export CODEX_EMAIL_USE_SSL="false" # true/false, default false
+export CODEX_EMAIL_USE_TLS="false" # true/false, default false
+export CODEX_EMAIL_USE_SSL="true" # true/false, default true
 ```
 
 If your SMTP server does not require auth, leave `CODEX_EMAIL_USERNAME` and `CODEX_EMAIL_PASSWORD` unset.

@@ -7,7 +7,7 @@
 ## :sparkles: Features
 - :zap: **快速使用：** 仅需三步即可使用，安装 Skill、设置环境变量、修改 AGENTS.md 让 Agent 进行通知
 - :desktop_computer: **支持多设备区分：** 可以设置 `CODEX_MACHINE_NAME` 来区分设备名称
-- :mobile_phone: **支持多端收信：** Bark（iphone）、邮件（任何设备）
+- :megaphone: **支持多端收信：** Bark（iphone）、邮件（任何设备）
 
 ## :book: 使用说明
 

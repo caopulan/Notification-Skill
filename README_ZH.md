@@ -2,7 +2,11 @@
 
 [English](README.md)
 
-用于在 Agent 任务结束后或者需要通知用户的时候，发送推送通知（当前支持Bark）。
+用于在 Agent 任务结束后或者需要通知用户的时候，发送推送通知（当前支持Bark和邮件通知）。
+
+## Features
+- **快速使用：**：仅需三步即可使用，安装Skill、设置环境变量、修改AGENTS.md让Agent进行通知
+- **支持多设备区分**：可以设置`CODEX_MACHINE_NAME`来区分设备名称
 
 ## 使用说明
 

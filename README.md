@@ -7,6 +7,7 @@ Send push notifications when an Agent task finishes or when you need to notify u
 ## :sparkles: Features
 - :zap: **Quick setup:** Only three steps to get started: install a skill, set environment variables, and update AGENTS.md so the Agent can notify
 - :desktop_computer: **Multi-device naming:** Set `CODEX_MACHINE_NAME` to distinguish devices
+- :mobile_phone: **Multi-device notification** Bark (iphone), Email (any devices)
 
 ## :book: Usage
 
@@ -21,7 +22,7 @@ $skill-installer https://github.com/caopulan/Notification-Skill/tree/main/email-
 ### 2. :gear: Configure
 
 #### 1) :key: Get required keys or parameters (TODO)
-1. Bark
+1. [Bark](https://github.com/finb/bark)
 2. Email
 
 #### 2) :wrench: Set environment variables on the machine

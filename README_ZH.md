@@ -5,8 +5,9 @@
 用于在 Agent 任务结束后或者需要通知用户的时候，发送推送通知（当前支持 Bark 和邮件通知）。
 
 ## :sparkles: Features
-- :zap: **快速使用：**仅需三步即可使用，安装 Skill、设置环境变量、修改 AGENTS.md 让 Agent 进行通知
-- :desktop_computer: **支持多设备区分：**可以设置 `CODEX_MACHINE_NAME` 来区分设备名称
+- :zap: **快速使用：** 仅需三步即可使用，安装 Skill、设置环境变量、修改 AGENTS.md 让 Agent 进行通知
+- :desktop_computer: **支持多设备区分：** 可以设置 `CODEX_MACHINE_NAME` 来区分设备名称
+- :mobile_phone: **支持多端收信：** Bark（iphone）、邮件（任何设备）
 
 ## :book: 使用说明
 
@@ -19,9 +20,9 @@ $skill-installer https://github.com/caopulan/Notification-Skill/tree/main/email-
 
 ### 2. :gear: 配置相关信息
 
-#### 1）:key: 获取所需的 Key 或其他参数（TODO）
-1. Bark
-2. Email
+#### 1）:key: 获取所需的 Key 或其他参数
+1. [Bark](https://github.com/finb/bark)
+2. [Email]()
 
 #### 2）:wrench: 将相关信息设置到机器环境变量
 
